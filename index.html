@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Courses</title>
+        <style>
+            .nameHeading {
+              background-color: lightgrey;
+              border-radius: 7%;
+              color: purple;
+              margin: 20px;
+              padding: 20px 50px;
+              width: max-content;
+              font-size: xx-large;
+            }
+            .instructorName {
+              color: maroon;
+              font-size: large;
+            }
+            .numberOfStudents {
+              color: black;
+              font-size: medium;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>List of classes</h2>
+        <div id="demo"></div>
+        <script type="text/javascript">
+                const  courses = [
+                                    {
+                                        "courseId" : 1,
+                                        "instructorName" : "Test Instructor 1",
+                                        "numberOfStudents" : 10,
+                                        "courseName" : "Test Name 1"
+                                    },
+                                    {
+                                        "courseId" : 2,
+                                        "instructorName" : "Test Instructor 2",
+                                        "numberOfStudents" : 20,
+                                        "courseName" : "Test Name 2"
+                                    },
+                                    {
+                                        "courseId" : 3,
+                                        "instructorName" : "Test Instructor 3",
+                                        "numberOfStudents" : 30,
+                                        "courseName" : "Test Name 3"
+                                    },
+                                    {
+                                        "courseId" : 4,
+                                        "instructorName" : "Test Instructor 4",
+                                        "numberOfStudents" : 40,
+                                        "courseName" : "Test Name 4"
+                                    },
+                                    {
+                                        "courseId" : 5,
+                                        "instructorName" : "Test Instructor 5",
+                                        "numberOfStudents" : 50,
+                                        "courseName" : "Test Name 5"
+                                    }
+                                ]
+                console.log(courses);
+                let text = "";
+                courses.forEach(myFunction);
+    
+                document.getElementById("demo").innerHTML = text;
+                
+                function myFunction(course, index) {
+                    text += '<div class="nameHeading">' + course.courseName
+                            +"<div>"
+                            + '<div class="instructorName">' + course.instructorName
+                            + "</div>"
+                            + '<div class="numberOfStudents"> number of students: ' + course.numberOfStudents
+                            + "</div>"
+                            + "</div>"
+                            + "</div>";
+               }
+            </script>
+    </body>
+</html>
